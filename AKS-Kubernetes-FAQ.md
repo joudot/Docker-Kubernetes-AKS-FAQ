@@ -7,5 +7,6 @@ It is efficient to control who can access your secrets using Azure Active Direct
 ## Best practices for monitoring the app once it is up and running in AKS?
 Microsoft recommends [Container Monitoring](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-overview). It can be configured as an addon when [creating an AKS cluster](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough#create-aks-cluster), so it is really easy to set up. Then, you have the application side logging and monitoring which is a different story, but this is not specific to where the workload runs.   
 
-
+## How to enable network policies in AKS? 
+Calico is currently in Preview in AKS: https://docs.microsoft.com/en-us/azure/aks/use-network-policies  
 

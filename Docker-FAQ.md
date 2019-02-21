@@ -1,10 +1,10 @@
 # Container FAQ
 
 ## How to clean out unused ACR images that are just dangling and not being used in prod?  
-Today they have to come up with their own logic to periodically purge their registry until the following feature is shipped by the ACR team: https://feedback.azure.com/forums/903958-azure-container-registry/suggestions/31243189-acr-auto-purge  
+Today you have to come up with your own logic to periodically purge the registry until the following feature is shipped by the ACR team: https://feedback.azure.com/forums/903958-azure-container-registry/suggestions/31243189-acr-auto-purge  
 
-## What example of tool can we use for figuring out what vulnerabilities they have in their container images?  
-I have seen demos of Aqua and it seemed pretty awesome. It can scan your ACR for vulnerable images, it can be integrated in your CI/CD pipeline to check that the images you build are based on image without any known vulnerability (or your build fails), you can use within your AKS cluster to enforce some policies that you define:  
+## What example of tool can we use for figuring out what vulnerabilities there are in container images?  
+Solutions like Aqua or Twistlock can be used. They can scan your ACR for vulnerable images, they can be integrated in your CI/CD pipeline to check that the images you build are based on image without any known vulnerability (or your build fails), you can use them within your AKS cluster to enforce some policies that you define:  
 - No container run with more privileges that they should.  
 - Your containers are only authorized to run a pre-defined subset of executables (they would get errors otherwise and you will be alerted)  
 - You can also enforce some networking rules to control their external communications   
@@ -41,7 +41,7 @@ https://github.com/Microsoft/iis-docker/issues/30 - comment from JohanSpannare o
 https://joshuachini.com/2018/02/08/how-to-import-an-enterprise-certificate-into-a-windows-container/ Setting up SSL in .NET Core from a nanoserver base OS. Similarly to this, here is the official GitHub repository summarizing how to do SSL with .NET Core: https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/aspnetcore-docker-https.md   
 
 
-## What dotnet image should be used to get security pacthes?   
+## What dotnet image should be used to get security patches?   
 https://blogs.msdn.microsoft.com/dotnet/2018/06/18/staying-up-to-date-with-net-container-images/ 
 
 

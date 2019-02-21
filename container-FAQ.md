@@ -3,7 +3,7 @@
 ## How to clean out unused ACR images that are just dangling and not being used in prod?  
 Today they have to come up with their own logic to periodically purge their registry until the following feature is shipped by the ACR team: https://feedback.azure.com/forums/903958-azure-container-registry/suggestions/31243189-acr-auto-purge  
 
-## What example of tool can we use for figuring out what vulnerabilities they have in their container images? 
+## What example of tool can we use for figuring out what vulnerabilities they have in their container images?  
 I have seen demos of Aqua and it seemed pretty awesome. It can scan your ACR for vulnerable images, it can be integrated in your CI/CD pipeline to check that the images you build are based on image without any known vulnerability (or your build fails), you can use within your AKS cluster to enforce some policies that you define:  
 - No container run with more privileges that they should.  
 - Your containers are only authorized to run a pre-defined subset of executables (they would get errors otherwise and you will be alerted)  
@@ -41,3 +41,21 @@ https://github.com/Microsoft/iis-docker/issues/30 - comment from JohanSpannare o
 https://joshuachini.com/2018/02/08/how-to-import-an-enterprise-certificate-into-a-windows-container/ Setting up SSL in .NET Core from a nanoserver base OS. Similarly to this, here is the official GitHub repository summarizing how to do SSL with .NET Core: https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/aspnetcore-docker-https.md   
 
 
+## What dotnet image should be used to get security pacthes?   
+https://blogs.msdn.microsoft.com/dotnet/2018/06/18/staying-up-to-date-with-net-container-images/ 
+
+
+
+## How to determine Host/Container kernel version compatility for Windows Containers?  
+https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/version-compatibility
+To determine the version go in interactive mode with the container and type systeminfo
+To determine host os version in k8s cluster, kubectl describe node <node_name>
+
+## What type of performance issue can we have with Docker Containers (beyond CPU/Memory consumption issues)?  
+https://hackernoon.com/another-reason-why-your-docker-containers-may-be-slow-d37207dec27f  
+
+## How can we leverage NVIDIA GPUs from containers?  
+There is a NVIDIA driver that you can install: https://github.com/NVIDIA/nvidia-docker
+
+## How can we analyze crash dump without Windbg tool + required extension?  
+Analyze Windows crash dump froma graphical UI without any Windbg extention to install: https://github.com/Dynatrace/superdump  

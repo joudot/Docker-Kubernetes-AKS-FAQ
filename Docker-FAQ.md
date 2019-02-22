@@ -59,3 +59,6 @@ There is a NVIDIA driver that you can install: https://github.com/NVIDIA/nvidia-
 
 ## How can we analyze crash dump without Windbg tool + required extension?  
 Analyze Windows crash dump froma graphical UI without any Windbg extention to install: https://github.com/Dynatrace/superdump  
+
+## In multi-staged builds, how can we delete the intermediate container images created?  
+There is a --rm option that can be used with `docker build` to remove intermediate container images after a successful build.  https://docs.docker.com/engine/reference/commandline/build/ 

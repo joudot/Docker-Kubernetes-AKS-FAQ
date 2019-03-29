@@ -9,7 +9,7 @@ Solutions like Aqua or Twistlock can be used. They can scan your ACR for vulnera
 - Your containers are only authorized to run a pre-defined subset of executables (they would get errors otherwise and you will be alerted)  
 - You can also enforce some networking rules to control their external communications   
 
-## How to unit test .NET Core Application in a Continuous Build  
+## How to unit test .NET Core Application in a Continuous Build?
 One approach that would work is to have the dotnet test command could be executed as part of a RUN command in a test image (using multi-stage builds).
 
 And here is the list of steps in the Azure build pipeline  
@@ -44,7 +44,7 @@ https://joshuachini.com/2018/02/08/how-to-import-an-enterprise-certificate-into-
 ## What dotnet image should be used to get security patches?   
 https://blogs.msdn.microsoft.com/dotnet/2018/06/18/staying-up-to-date-with-net-container-images/ 
 
-
+https://devblogs.microsoft.com/dotnet/net-core-container-images-now-published-to-microsoft-container-registry/ 
 
 ## How to determine Host/Container kernel version compatility for Windows Containers?  
 https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/version-compatibility

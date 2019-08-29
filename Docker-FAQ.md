@@ -25,6 +25,8 @@ https://stackoverflow.com/questions/50123486/run-dotnet-test-inside-docker-conta
 https://andrestc.com/post/cgroups-io/ or  https://stackoverflow.com/questions/36145817/how-to-limit-io-speed-in-docker-and-share-file-with-system-in-the-same-time. You can find more info about the Bloc I/O metrics here: https://docs.docker.com/config/containers/runmetrics/#metrics-from-cgroups-memory-cpu-block-io   
 
 ## How to configure SSL certificates in Containers?  
+Service Mesh is one of the popular option these days although it comes with way more features but also some overhead. It would enforce SSL communication even internally to the Kubernetes cluster.
+
 **AKS with SSL offloading**  
 What Microsoft recommends for AKS clusters is to use ingress controller and SSL offloading: https://docs.microsoft.com/en-us/azure/aks/ingress The reason why this is the recommended approach is that you don’t want your containers to be slowed down by the certificate installation every time they restart.  
 https://github.com/kubernetes/ingress-nginx/blob/master/docs/examples/PREREQUISITES.md#tls-certificates shows the SSL offloading approach with nginx ingress controller in AKS (Linux)  

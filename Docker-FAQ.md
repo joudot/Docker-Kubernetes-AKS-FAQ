@@ -1,7 +1,7 @@
 # Container FAQ
 
 ## How to clean out unused ACR images that are just dangling and not being used in prod?  
-Today you have to come up with your own logic to periodically purge the registry until the following feature is shipped by the ACR team: https://feedback.azure.com/forums/903958-azure-container-registry/suggestions/31243189-acr-auto-purge  
+Before, you had to come up with your own logic to periodically purge the registry until the following feature was shipped by the ACR team: https://feedback.azure.com/forums/903958-azure-container-registry/suggestions/31243189-acr-auto-purge. This feature is now in Preview: https://docs.microsoft.com/en-us/azure/container-registry/container-registry-auto-purge  
 
 ## What example of tool can we use for figuring out what vulnerabilities there are in container images?  
 Solutions like Aqua or Twistlock can be used. They can scan your ACR for vulnerable images, they can be integrated in your CI/CD pipeline to check that the images you build are based on image without any known vulnerability (or your build fails), you can use them within your AKS cluster to enforce some policies that you define:  

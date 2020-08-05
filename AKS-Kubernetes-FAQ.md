@@ -12,3 +12,7 @@ Open Source solutions like Prometheus are also really popular. There is an integ
 ## How to enable network policies in AKS? 
 Calico is currently in Preview in AKS: https://docs.microsoft.com/en-us/azure/aks/use-network-policies  
 
+
+## Checklist before running AKS in production? 
+https://www.the-aks-checklist.com/
+

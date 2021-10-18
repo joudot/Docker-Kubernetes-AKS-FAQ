@@ -16,3 +16,5 @@ Calico is currently in Preview in AKS: https://docs.microsoft.com/en-us/azure/ak
 ## Checklist before running AKS in production? 
 https://www.the-aks-checklist.com/
 
+## Best practices to secure AKS cluster
+https://techcommunity.microsoft.com/t5/apps-on-azure/securing-an-azure-kubernetes-service-deployment/ba-p/2838794#.YWg6RQN1B4g.linkedin
